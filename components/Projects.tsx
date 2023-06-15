@@ -9,7 +9,7 @@ function Projects() {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project, index) => (
           <motion.div
             initial={{ opacity: 0 }}
@@ -25,6 +25,7 @@ function Projects() {
               viewport={{ once: true }}
               src={ProjectImage.src}
               alt="Project Image"
+              className="w-50 h-50"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-3xl font-semibold text-center">To Do App</h4>
