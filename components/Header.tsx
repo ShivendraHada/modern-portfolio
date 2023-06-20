@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <header className="max-w-7xl mx-auto sticky top-0 right-0 flex flex-row justify-between p-5">
+    <header className="max-w-7xl mx-auto sticky top-0 right-0 flex flex-row justify-between p-4">
       <motion.div
         initial={{
           x: -500,

@@ -12,6 +12,14 @@
     }
 
     .snapHeading {
+        @apply mt-20 uppercase tracking-[15px] text-gray-500 text-2xl w-full text-center
+    }
 
+    .customScrollbar {
+        @apply scrollbar scrollbar-w-1 scrollbar-h-1 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80
+    }
+
+    .carousel-button {
+        @apply absolute top-[50%] translate-y-[-50%] z-10 bg-[#f7ab0a]/20 h-10 w-10 md:h-16 md:w-16 mx-5 rounded-full font-bold text-white text-xl md:text-3xl p-2 border-none cursor-pointer active:bg-[#f7ab0a]/80
     }
 }

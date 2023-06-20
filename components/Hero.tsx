@@ -16,6 +16,16 @@ function Hero() {
     delaySpeed: 2000,
   });
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
@@ -36,20 +46,24 @@ function Hero() {
         </h1>
 
         <div className="pt-5">
-          <Link href="#about">
-            <button className="heroButton">About</button>
+          <Link href="#about" className="heroButton" onClick={handleScroll}>
+            About
           </Link>
-          <Link href="#experience">
-            <button className="heroButton">Experience</button>
+          <Link
+            href="#experience"
+            className="heroButton"
+            onClick={handleScroll}
+          >
+            Experience
           </Link>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
+          <Link href="#skills" className="heroButton" onClick={handleScroll}>
+            Skills
           </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
+          <Link href="#projects" className="heroButton" onClick={handleScroll}>
+            Projects
           </Link>
-          <Link href="#contact">
-            <button className="heroButton">Contact Us</button>
+          <Link href="#contact" className="heroButton" onClick={handleScroll}>
+            Contact Us
           </Link>
         </div>
       </div>
